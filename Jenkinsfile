@@ -11,7 +11,7 @@ pipeline {
                     terraform --version
                     terraform init
                     terraform plan
-                    terraform apply -auto-approve  -var "access_key=${access_key}" -var "secret_key=${secret_key}"
+                    terraform apply -auto-approve"
                 '''
             }
         }
