@@ -1,11 +1,11 @@
 pipeline {
     agent any
+    enviroment {
+        access_key = credentials('access_key')
+        secret_key = credentials('secret_key')
+    }
     stages {
         stage('terraform') {
-            enviroment {
-                access_key = credentials('access_key')
-                secret_key = credentials('secret_key')
-            }
             steps {
                 sh '''
                     terraform --version
