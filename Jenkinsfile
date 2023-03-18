@@ -1,14 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('verify terraform version') {
-            steps {
-                 sh '''
-                    terraform --version
-                '''
-            }
-        }
-        stage('Build') {
+        stage('terraform') {
             enviroment {
                 access_key = credentials('access_key')
                 secret_key = credentials('secret_key')
