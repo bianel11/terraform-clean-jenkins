@@ -8,8 +8,8 @@ variable "secret_key" {
 
 provider "aws" {
   region     = "us-east-1"
-  access_key = var.access_key
-  secret_key = var.secret_key
+  access_key = file("/home/access_key.txt")
+  secret_key = file("/home/secret_key.txt")
 }
 
 resource "aws_instance" "example" {
