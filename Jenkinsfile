@@ -6,7 +6,7 @@ pipeline {
                 sh '''
                     terraform --version
                     terraform init
-                    terraform apply -auto-approve"
+                    terraform apply -auto-approve
                 '''
             }
         }
