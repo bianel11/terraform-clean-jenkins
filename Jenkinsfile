@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-        access_key = credentials('access_key')
-        secret_key = credentials('secret_key')
-    }
     stages {
         stage('terraform') {
             steps {
