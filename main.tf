@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "us-east-1"
-  access_key = file("/home/access_key.txt")
-  secret_key = file("/home/secret_key.txt")
+  access_key = file("/home/ec2-user/access_key.txt")
+  secret_key = file("/home/ec2-user/secret_key.txt")
 }
 
 resource "aws_instance" "example" {
