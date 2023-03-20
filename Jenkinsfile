@@ -10,7 +10,8 @@ pipeline {
                 sh '''
                     terraform --version
                     terraform init
-                    terraform apply -auto-approve -var "access_key=${access_key}" -var "secret_key=${secret_key}"
+                    terraform destroy -auto-aprove
+                    terraform apply -auto-approve -var "access_key=AKIAXFKDDCMACIRIYZG2" -var "secret_key=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"
                 '''
             }
         }
